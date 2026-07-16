@@ -1,0 +1,19 @@
+sequenceDiagram
+    actor Customer
+    participant Platform
+    actor StoreTeam
+
+    Customer->>Platform: Registers interest for a drop
+    Platform->>Platform: Records registration, applies eligibility rules
+    alt Capacity available
+        Platform->>Platform: Runs allocation
+        Platform->>Customer: Sends reservation & QR access pass
+    else Over capacity
+        Platform->>Customer: Places on waitlist
+        Platform-->>Customer: Notifies if a slot opens (planned automation)
+    end
+    Customer->>StoreTeam: Arrives with QR access pass
+    StoreTeam->>Platform: Scans QR pass
+    Platform-->>StoreTeam: Returns verification state
+    StoreTeam->>Customer: Admits, redirects, or escalates based on state
+    Platform->>Platform: Logs check-in for operational reporting

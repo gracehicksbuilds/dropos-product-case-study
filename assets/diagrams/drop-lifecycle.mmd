@@ -1,0 +1,11 @@
+flowchart TD
+    A[Campaign setup] --> B[Customer registration]
+    B --> C{Eligibility & waitlist review}
+    C -->|Capacity available| D[Allocation]
+    C -->|Over capacity| W[Waitlist]
+    W -.->|Slot becomes available - planned automation| D
+    D --> E[Reservation]
+    E --> F[QR access pass issued]
+    F --> G[Arrival & verification]
+    G --> H[Check-in / collection]
+    H --> I[Operational reporting]

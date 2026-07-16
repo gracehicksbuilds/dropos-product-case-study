@@ -1,0 +1,31 @@
+flowchart LR
+    subgraph Customer["Customer experience"]
+        CE[Registration & drop pages]
+    end
+
+    subgraph Retail["Retail operations interface"]
+        RO[Dashboard, drop builder, scanner, reports]
+    end
+
+    subgraph App["Application layer"]
+        AL[Multi-tenant application & workflow logic]
+    end
+
+    subgraph Auth["Authentication & roles"]
+        AU[Identity, role-based access, tenant isolation]
+    end
+
+    subgraph Data["Data layer"]
+        DL[Tenant-isolated data store]
+    end
+
+    subgraph Reporting["Reporting"]
+        RP[Operational dashboards & analytics]
+    end
+
+    CE --> AL
+    RO --> AL
+    AL --> AU
+    AL --> DL
+    DL --> RP
+    AU --> DL

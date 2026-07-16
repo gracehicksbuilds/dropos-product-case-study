@@ -1,0 +1,16 @@
+stateDiagram-v2
+    [*] --> Scanned
+    Scanned --> Valid: Pass matches this drop, slot and has not been used
+    Scanned --> InvalidExpired: Pass is invalid, tampered, or expired
+    Scanned --> WrongWindow: Pass is valid but for a different collection window
+    Scanned --> AlreadyUsed: Pass was already checked in
+
+    Valid --> AdmitCustomer
+    InvalidExpired --> DenyEntry
+    WrongWindow --> RequiresStaffReview
+    AlreadyUsed --> ShowFirstCheckInTime
+
+    AdmitCustomer --> [*]
+    DenyEntry --> [*]
+    RequiresStaffReview --> [*]
+    ShowFirstCheckInTime --> [*]
