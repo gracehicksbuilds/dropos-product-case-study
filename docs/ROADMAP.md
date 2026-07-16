@@ -25,8 +25,8 @@ are implied. Internal sprint-level planning is not included here.
 
 - Public API access, so retailers can connect DropOS to their own
   systems (inventory, CRM, point of sale)
-- Enterprise-readiness capabilities — including single sign-on and more
-  granular permission models — for larger retail organisations
+- Enterprise-readiness capabilities (including single sign-on and more
+  granular permission models) for larger retail organisations
 - Expansion to additional notification channels and payment integrations
   beyond what the platform supports today
 

@@ -1,6 +1,6 @@
 # Architecture Overview
 
-This is a safe, conceptual look at how DropOS is put together — enough to
+This is a safe, conceptual look at how DropOS is put together, enough to
 understand the shape of the system, without exposing implementation
 detail that is either commercially sensitive or would help someone
 attempt to circumvent the platform's access controls.
@@ -43,7 +43,7 @@ flowchart LR
 
 The public-facing side of the platform: branded registration pages and
 drop landing pages, themed per retailer. This is what a customer
-interacts with directly — no login is required to register interest in a
+interacts with directly; no login is required to register interest in a
 drop.
 
 ## Retail operations interface
@@ -56,13 +56,13 @@ scanner interface for store staff during the event itself.
 
 The workflow logic connecting registration, allocation, reservations, and
 verification into a single lifecycle per drop. This layer is where a
-drop's rules — its eligibility, its capacity, its allocation approach —
+drop's rules (its eligibility, its capacity, its allocation approach)
 are actually applied.
 
 ## Authentication & roles
 
-Every person accessing the retail operations interface — a retailer
-admin, a store manager, or scanner staff — is authenticated and assigned
+Every person accessing the retail operations interface (a retailer
+admin, a store manager, or scanner staff) is authenticated and assigned
 a role that determines what they can see and do. Role checks happen at
 more than one layer, so a gap in one layer doesn't become a security
 hole on its own.
@@ -71,14 +71,14 @@ hole on its own.
 
 All operational data is isolated per retailer (tenant) at the database
 level, not only through application logic. This is the platform's final
-backstop against one retailer's data ever becoming visible to another —
+backstop against one retailer's data ever becoming visible to another,
 deliberately not dependent on every part of the application getting an
 access check right.
 
 ## Reporting
 
 Registration, allocation and check-in activity feeds operational
-dashboards — both live, during an event, and as a historical record
+dashboards, both live, during an event, and as a historical record
 afterwards.
 
 ## What's intentionally not covered here

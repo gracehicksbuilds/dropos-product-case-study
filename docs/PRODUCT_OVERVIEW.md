@@ -19,7 +19,7 @@ supply on a specific day:
   across one or more physical locations
 - **Activation agencies** running a launch event on behalf of a brand
   client, often across multiple stores or markets
-- **Store operations teams** — managers and floor staff — who need
+- **Store operations teams** (managers and floor staff) who need
   reliable, mobile-first tools to run the event itself, not just plan it
 
 These are not general e-commerce or generic event-ticketing use cases.
@@ -43,7 +43,7 @@ were not designed for it:
   access-control premise
 
 The result is a launch day where staff are reacting rather than operating
-from a system of record — and where the retailer has no reliable way to
+from a system of record, and where the retailer has no reliable way to
 prove, after the fact, that allocation was fair.
 
 ## Current market focus
